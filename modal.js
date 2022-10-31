@@ -16,7 +16,9 @@ loginImage.addEventListener('click', () => {
   showModal('background-modal')
 })
 
-const openAcc = document.querySelector('#contaheader');
-openAcc.addEventListener('click', () => {
-  showModal('crypto-modal')
+
+
+const internalLogin = document.querySelector('#internal-login');
+internalLogin.addEventListener('click', () => {
+  showModal('background-modal')
 })

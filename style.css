@@ -126,8 +126,11 @@ li:hover{
     /* font-weight: bolder; */
     justify-content: flex-end;
     align-items: center;
-    /* color: rgb(100,100,100); */
 }
+.innerLogin{
+    display:none;
+}
+
 
 .abrasuaconta{
     position: relative;
@@ -329,10 +332,10 @@ input{
         justify-content: end;
     }
 
-    .menubar img{
+    /* .menubar img{
         padding-left: 0;
-        height: 10% ;
-    }
+        height: 100% ;
+    } */
 
     .menubar{
         padding-bottom: 10px;
@@ -352,20 +355,24 @@ input{
     .abrirconta-email{  
         top: 200%;
         display: flex;
+        border-bottom:solid 60px white;
+    }
+    .capclient{  
+        border:0;
     }
 
+ 
     #contacontent{
-        width: 200px;
+        width: 250px;
+        margin-bottom:-30px;
     }
 
     #contaheader{
         height: 30px;
         width: 140px;
-    }
+    } */
 
-    #login{
-        display: none;
-    }
+
 }
 
 
@@ -413,6 +420,9 @@ input{
         display: flex;
         justify-content: center;
     }
+    #contaheader{
+        display: none;
+    }
 }
 
 
@@ -437,7 +447,7 @@ input{
     }
 
     .logconta{
-        padding-right: 0;   
+        padding-right: 5%;   
     }
 
     #contacontent{

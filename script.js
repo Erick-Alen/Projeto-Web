@@ -52,7 +52,6 @@ const coin = {
 }
 
 let input_datalistCrypto = document.getElementById("input-datalist-crypto")
-// console.log(input_datalistCrypto.value)
 
 let input_datalistAno = document.getElementById("input-datalist-ano")
 
@@ -80,19 +79,6 @@ await axios.get(`https://www.mercadobitcoin.net/api/${coin[input_datalistCrypto.
     })
 
 });
-
-// function selecionaDias(, mes, dia){
-//     console.log("entrou busca crypto")
-//     axios.get(`https://www.mercadobitcoin.net/api/${coin[crypto]}/day-summary/${year[ano]}/${month[mes]}/${dias[dia]}`)
-//     .then((json) => {
-//         preencheResultados(json.data)
-//     })
-//     .catch((error) => {
-//         alert("Erro nas informações")
-//     })
-//     event.preventDefault()
-// }
-
 function preencheResultados(data){
     let tabela_resultados = document.getElementById("result-crypto")
     tabela_resultados.innerHTML = `<tr>\
@@ -100,11 +86,11 @@ function preencheResultados(data){
                                         <td>${data["date"]}</td>\
                                         </tr>\
                                     <tr>\
-                                        <td>Preço de abertura:</td>\
+                                        <td>Preço de abertura(R$):</td>\
                                         <td>${data["opening"]}</td>\
                                     </tr>\
                                     <tr>\
-                                        <td>Preço de fechamento:</td>\
+                                        <td>Preço de fechamento(R$):</td>\
                                         <td>${data["closing"]}</td>\
                                         </tr>\
                                         <tr>\
@@ -112,7 +98,7 @@ function preencheResultados(data){
                                         <td>${data["volume"]}</td>\
                                         </tr>\
                                     <tr>\
-                                        <td>Preço médio:</td>\
+                                        <td>Preço médio(R$):</td>\
                                         <td>${data["avg_price"]}</td>\
                                     </tr>`
                                 }
