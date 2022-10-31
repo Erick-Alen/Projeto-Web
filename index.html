@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clear Corretora: A 1ª com corretagem zero</title>
+    <link rel="icon" type="image/x-icon" href="/fotos/linkTitle.png">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="./loginModal.css" type = "text/css">
+
 </head>
+
 <body>
     <div class="wrapper">
         <header>
             <div class="centralizar">
                 <div class="menubar">
                     <div class="menuitems">
-                        <img src="fotos/icon-menu.svg" alt="logo corretora clear" class="logo">
+                        <a href="https://corretora.clear.com.br/"><img src="fotos/icon-menu.svg" alt="logo corretora clear" class="logo"></a>
+                        <!-- <img src="fotos/icon-menu.svg" alt="logo corretora clear" class="logo"> -->
                         <ul>
                             <li class="displaynone">Sobre<div class="seta">&#748</div></li>
                             <li class="displaynone">Investimentos<div class="seta">&#748</div></li>
@@ -26,12 +31,12 @@
                     <div class="menubuttons">
                         
                         <div class="logconta" id="login">
-                            <div class="logconta">
-                                <!-- <a href="https://pro.clear.com.br/"> -->
+                            <!-- <div class="logconta">
+                                <a href="https://pro.clear.com.br/">
                                     <img src="fotos/LogItem.png" alt="Login" id="login-image">
-                                    Login
-                                <!-- </a> -->
-                            </div>
+                                
+                            </div> -->
+                                <button id="login-image">Login</button>
                         </div>
 
                         <div>
@@ -50,7 +55,7 @@
         </header>
             
 
-        <div class="content">
+        <div class="myContent">
             <img src="fotos/Destaque_Home_DESK_3.webp" class="imgbkg" alt="">
             <div class="slogan">
                 <div class="texto-principal">
@@ -62,27 +67,228 @@
                     <div class="topicos">
                         <p>+ Corretagem zero*</p>
                         <p>+ Plataforma**</p>
-                        <p>+ AIA <span class="caixabaixa">(Assistência de Inteligência Artificial)</span></p>
+                        <p>+ ufjgh <span class="caixabaixa">(Assistência de Inteligência Artificial)</span></p>
                     </div>    
                 </div>
                 <div class="abrirconta-email">
                     <div class="alinhacentro">
                         <div class="capclient">
                             <div>
-                            <input type="text" name="name" id="nome" value="Nome e sobrenome">
+                            <input type="text" name="name" id="nome" placeholder="Nome e Sobrenome">
                             </div>
                             <div>
-                            <input type="email" name="email" id="email" value="Email">
+                            <input type="email" name="email" id="email-abrirconta" placeholder="Email">
                             </div>
                         </div>
-                        <div class="btabrirconta">
+                        <div>
                             <button id="contacontent" class="abrasuaconta">Abra sua conta</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+                    <!-- Modal Login -->
+                    <style>
+                        body {font-family: ClearReg;}
+                        
+                        /* The Modal (background) */
+                        .modal {
+                          display: none; /* Hidden by default */
+                          position: fixed; /* Stay in place */
+                          z-index: 1; /* Sit on top */
+                          padding-top: 100px; /* Location of the box */
+                          left: 0;
+                          top: 0;
+                          width: 100%; /* Full width */
+                          height: 100%; /* Full height */
+                          overflow: auto; /* Enable scroll if needed */
+                          background-color: rgb(0,0,0); /* Fallback color */
+                          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                        }
+                        
+                        /* Modal Content */
+                        .modal-content {
+                          background-color: #fefefe;
+                          margin: auto;
+                          padding: 20px;
+                          border: 1px solid #888;
+                          width: 80%;
+                        }
+                        
+                        /* The Close Button */
+                        .close {
+                          color: #aaaaaa;
+                          float: right;
+                          font-size: 28px;
+                          font-weight: bold;
+                        }
+                        
+                        .close:hover,
+                        .close:focus {
+                          color: #000;
+                          text-decoration: none;
+                          cursor: pointer;
+                        }
+                        </style>
+                        </head>
+                        <body>
+                        
+                        <!-- The Modal -->
+                        <div id="background-modal" class="modal-container">
+                            <div class=container>
+                                <button class="exitModal">
+                                    <img  class="closeButton" src="fotos/close-icon.png" alt="Fechar">
+                                </button>
+                                <div class=greeting>
+                                    <span class='welcome'>Seja Bem-Vindo(a)</span>
+                                    <span class='yourAccount'>Entre com seus dados para acessar sua conta</span>
+                                </div>
+            
+                                <div class="content">
+                                    <span class="errorMessage">Email e/ou senha incorretos!</span>
+                                    <div class="content-area-login">
+                                        <input id="email" type="text" placeholder="Insira seu e-mail">
+                                    </div>
+                                    <div class="content-area-password">
+                                        <input id="password" type="password" placeholder="Insira sua senha">
+                                    </div>
+                                    <button type="submit" class="submitButton" >Entrar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="crypto-modal" class ="container-crypto">
+                            <div class="inner-container">
+                                <div id="title-div">
+                                    <h1 style="text-align: center;color: blue; margin-top: 1%">Consulta de criptomoedas</h1>
+                                </div>
+                                <button class="exitModal">
+                                    <img  class="closeButton" src="fotos/close-icon.png" alt="Fechar">
+                                </button>
+                        
+                                <div id = "content-div">
+                                    <div id="forms-div">
+                                        <p style="text-align: center;font-weight: 800; padding-bottom:5%" >Entre com os valores de busca</p>
+                                    
+                                        <form id="form-crypto" action="#" autocomplete="off" >
+                                            <div id="form-inputs">
+                                                <label for="datalist-crypto">Criptomoeda</label><br>
+                                                <input required class="datalist" list="datalist-crypto" id="input-datalist-crypto" placeholder="Digite e selecione um valor">
+                                                <datalist id="datalist-crypto">
+                                                    <option value = "Bitcoin (BTC)">
+                                                    <option value = "Ethereum (ETH)">
+                                                    <option value = "Tether (USDT)">
+                                                    <option value = "BNB (BNB)">
+                                                    <option value = "USD Coin (USDC)">
+                                                    <option value = "XRP (XRP)">
+                                                    <option value = "Binance USD (BUSD)">
+                                                    <option value = "Dogecoin (DOGE)">
+                                                    <option value = "Cardano (ADA)">
+                                                    <option value = "Solana (SOL)">
+                                                    <option value = "Polygon (MATIC)">
+                                                    <option value = "Polkadot (DOT)">
+                                                    <option value = "Shiba Inu (SHIB)">
+                                                    <option value = "Dai (DAI)">
+                                                    <option value = "TRON (TRX)">
+                                                    <option value = "Avalanche (AVAX)">
+                                                    <option value = "Chainlink (LINK)">
+                                                    <option value = "Cosmos (ATOM)">
+                                                    <option value = "Uniswap (UNI)">
+                                                </datalist>
+                                                <br>
+                                                
+                                                <label for="datalist-ano">Ano</label><br>
+                                                <input required class="datalist" list="datalist-ano" id="input-datalist-ano" placeholder="Digite e selecione um valor">
+                                                <datalist id="datalist-ano">
+                                                    <option value = "2021">
+                                                    <option value = "2020">
+                                                    <option value = "2019">
+                                                    <option value = "2018">
+                                                    <option value = "2017">
+                                                    <option value = "2016">
+                                                    <option value = "2015">
+                                                    <option value = "2014">
+                                                    <option value = "2013">
+                                                    <option value = "2012">
+                                                    <option value = "2011">
+                                                    <option value = "2010">
+                                                </datalist>
+                                                <br>
+                                                <label for="datalist-mes">Mês</label><br>
+                                                <input required class="datalist" list="datalist-mes" id="input-datalist-mes" placeholder="Digite e selecione um valor">
+                                                <datalist id="datalist-mes">
+                                                    <option value = "Janeiro - 1">
+                                                    <option value = "Fevereiro - 2">
+                                                    <option value = "Março - 3">
+                                                    <option value = "Abril - 4">
+                                                    <option value = "Maio - 5">
+                                                    <option value = "Junho - 6">
+                                                    <option value = "Julho - 7">
+                                                    <option value = "Agosto - 8">
+                                                    <option value = "Setembro - 9">
+                                                    <option value = "Outubro - 10">
+                                                    <option value = "Novembro - 11">
+                                                    <option value = "Dezembro - 12">
+                                                </datalist>
+                                                <br>
+
+                                                <label for="datalist-dia">Dia</label><br>
+                                                <input required class="datalist" list="datalist-dia" id="input-datalist-dia" placeholder="Digite e selecione um valor">
+                                                <datalist id="datalist-dia">
+                                                    <option value = "1">
+                                                    <option value = "2">
+                                                    <option value = "3">
+                                                    <option value = "4">
+                                                    <option value = "5">
+                                                    <option value = "6">
+                                                    <option value = "7">
+                                                    <option value = "8">
+                                                    <option value = "9">
+                                                    <option value = "10">
+                                                    <option value = "11">
+                                                    <option value = "12">
+                                                    <option value = "12">
+                                                    <option value = "13">
+                                                    <option value = "14">
+                                                    <option value = "15">
+                                                    <option value = "16">
+                                                    <option value = "17">
+                                                    <option value = "18">
+                                                    <option value = "19">
+                                                    <option value = "20">
+                                                    <option value = "21">
+                                                    <option value = "22">
+                                                    <option value = "23">
+                                                    <option value = "24">
+                                                    <option value = "25">
+                                                    <option value = "26">
+                                                    <option value = "27">
+                                                    <option value = "28">
+                                                    <option value = "29">
+                                                    <option value = "30">
+                                                    <option value = "31">
+                                                </datalist>
+                                                <br>
+                                            </div>
+                                        
+                                            <div id="form-submit">
+                                                <button id = "searchButton" >buscar</button>
+                                            </div>
+                                        </form>
+                                    </div> 
+                                
+                                    <div id="result-div">
+                                        <p style="text-align: center;font-weight: 600;">Resultado da busca</p>
+                                        <table id="result-crypto"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
     </div>
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
