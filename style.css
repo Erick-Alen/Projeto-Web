@@ -131,6 +131,21 @@ li:hover{
     display:none;
 }
 
+.abrir-tabela{
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    font-family: 'ClearMed';
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+    width: 140px;
+    border-radius: 4px;
+    border: solid 2px blue;
+    padding-top: 13px;
+}
 
 .abrasuaconta{
     position: relative;
@@ -171,6 +186,14 @@ li:hover{
 .myContent{
     position: relative;
     display: flex;
+}
+
+.show{
+    display:flex;
+}
+
+.show-false{
+    display: none;
 }
 
 .imgbkg{
@@ -362,7 +385,7 @@ input{
     }
 
  
-    #contacontent{
+    /* #contacontent{
         width: 250px;
         margin-bottom:-30px;
     }
@@ -370,7 +393,7 @@ input{
     #contaheader{
         height: 30px;
         width: 140px;
-    } */
+    }  */
 
 
 }

@@ -17,10 +17,13 @@ function login() {
     request_login.onreadystatechange = function () {
       if (request_login.readyState === 4 && request_login.status === 200) {
         localStorage.setItem("token", JSON.parse(request_login.responseText).token)
+        localStorage.setItem("email", email)
         document.getElementById('login-image');
         document.querySelector('#background-modal').style.display = 'none';
+        let emailUser = localStorage.getItem('email');
+        let helloUser = document.querySelector('.helloContainer');
+        helloUser.innerHTML += emailUser;
         showModal('crypto-modal');
-
       } else if (request_login.status === 400) {
         document.getElementsByClassName('errorMessage')[0].style.display = 'flex'
 

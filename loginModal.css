@@ -50,6 +50,22 @@
   animation: modal .5s;
 }
 
+.logOutModal{
+  background-color: red;
+  outline: none;
+  border: none;
+  position: absolute;
+  color: white;
+  font-family: 'ClearReg';
+  font-weight: bold;
+  width: 8%;
+  height: 5%;
+  font-size: 15px;
+  top: 21px;
+  right: 70px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 .exitModal{
   background-color: transparent;
   outline: none;
