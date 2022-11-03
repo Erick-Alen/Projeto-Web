@@ -8,6 +8,7 @@ function showModal(idModal){
         modal.classList.remove('show')
         localStorage.removeItem('token')
         localStorage.removeItem('email')
+        hideTableButton('contaheader')
       } else if(event.target.id == 'idModal' || event.target.className == 'closeButton'){
         showTableButton('contaheader')
         modal.classList.remove('show')
@@ -22,6 +23,15 @@ function showTableButton(button){
     btn.classList.add('show');
   }
 }
+
+function hideTableButton(button){
+  const btn = document.getElementById(button);
+  if(btn){
+    btn.classList.remove('show');
+  }
+}
+
+
 
 const loginImage = document.querySelector('#login-image');
 loginImage.addEventListener('click', () => {
